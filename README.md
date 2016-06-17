@@ -34,7 +34,7 @@ CREATE TABLE sequence (
 * @sequence_cycle is set to 0 or 1 (Null means 0, i.e. don't cycle)
 
 ###call sequence_create_full(sequence_name, initial_value, current_value, step_size, max_value, cycle);
-*Adds a named sequence to the sequence table, specifying initial_value, current_value, step_size and max_value.
+*Adds a named sequence to the sequence table, specifying initial_value, current_value, step_size and max_value.  
    if cycle is true, then when sequence_nextval() increments past max_value, it cycles back to initial_value.
 
 ####sets session variables
@@ -93,7 +93,7 @@ CREATE TABLE sequence (
 * Returns sequence.initial_value
 
 ###select sequence_setcycle('sequence_name', new_cycle_value);
-* Updates the sequence.cycle field to the new_cycle_value.
+* Updates the sequence.cycle field to the new_cycle_value.  
    if new_cycle_value is null then new_cycle_value changed to 0  
    if new_cycle_value > 1 then new_cycle_value changed to 1
 * sets session variable @sequence_cycle to new_cycle_value.
