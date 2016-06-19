@@ -123,6 +123,6 @@ CREATE TABLE sequence (
    if cycle is true and the incremented current_value is > max_value, current_value is set to initial_value.  
    if cycle is false and the incremented current_value is > max_value, current_value is set to max_value.
 * sets session variable @sequence_current_value to the new current_value
-* Returns the new sequence.current_value having set
+* Returns the new sequence.current_value
 
 
